@@ -1,0 +1,25 @@
+BODY 
+
+P {margin-left:5px; color: ivory; font-family: arial; font-size: 11px}
+.center {text-align: center }
+.right {text-align: right}
+.left {text-align:left}
+.justify {text-align: justify}
+.title {font-size: 30px; font-style: oblique}
+.marginless {margin-left: 0px}
+.large {font-size: 14px; text-align: center }
+.vlarge {font-size: 20px; text-align: center }
+.black {text-align: center; font-size: 12px}
+.yellow {color: "#F2E497"; font-style: oblique; font-size: 12px}
+.turquoise {color: darkturquoise; font-style: oblique}
+.pink {color: deeppink; font-style: oblique; font-size: 12px}
+
+A:link {color: "#F2E497";text-decoration:none}
+A:visited {color: "#F2E497"; text-decoration:none}
+A:hover {color: firebrick;text-decoration:none}
+.list {  font-size: 14px; text-align: center; font-weight: bold}
+.sublist {  font-size: 12px; text-align: center}
+
+
+
+

@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Script Component Test</title>
+<style>
+body { font-family: arial, verdana, sans-serif; }
+.rssControl { width: 300px; border: 1px solid #ccc; padding: 1px; }
+.rssControlTitle { background: #ccc; }
+.title { font-size: 10pt; border-bottom: 1px dotted #ccc; margin:0px; }
+.title a { text-decoration: none; }
+.title a:hover { text-decoration: none; }
+.title a:visited { text-decoration: none; }
+.title a:active { text-decoration: none; }
+.title a:link { text-decoration: none; }
+.description { font-size: 8pt; margin-left: 10px; margin-top:3px; }
+</style>
+<script>
+var g_homeDirectory = 'http://localhost/rss/';
+
+function loadScript( url )
+{
+  var elScript = document.createElement( 'script' );
+  elScript.src = url;
+  document.body.appendChild( elScript );
+}
+
+function addFeed( id, articles )
+{
+  var ela = document.getElementById( 'elArticles' );
+  ela.innerHTML = '';
+
+  var elTable = document.createElement( 'table' );
+  var elTBody = document.createElement( 'tbody' );
+  elTable.appendChild( elTBody );
+
+  for( var a in articles )
+  {
+    var title = articles[a].title;
+    var link = articles[a].link;
+    var description = articles[a].description;
+
+    var elTR = document.createElement( 'tr' );
+    elTBody.appendChild( elTR );
+
+    var elTD = document.createElement( 'td' );
+    elTR.appendChild( elTD );
+
+    var elTitle = document.createElement( 'h1' );
+    elTitle.className = 'title';
+    elTD.appendChild( elTitle );
+
+    var elTitleLink = document.createElement( 'a' );
+    elTitleLink.href = link;
+    elTitleLink.innerHTML = title;
+    elTitleLink.target = '_blank';
+    elTitle.appendChild( elTitleLink );
+
+    var elDescription = document.createElement( 'p' );
+    elDescription.className = 'description';
+    elDescription.innerHTML = description;
+    elTD.appendChild( elDescription );
+  }
+
+  ela.appendChild( elTable );
+}
+
+function setFeeds( feeds )
+{
+  var elfl = document.getElementById( 'elFeedList' );
+  elfl.innerHTML = '';
+
+  var firstId = null;
+  for( var f in feeds )
+  {
+    var elOption = document.createElement( 'option' );
+    elOption.value = feeds[f].id;
+    elOption.innerHTML = feeds[f].name;
+    elfl.appendChild( elOption );
+
+    if ( firstId == null ) firstId = feeds[f].id;
+  }
+  loadFeed( firstId );
+}
+
+function loadFeed( id )
+{
+  loadScript( g_homeDirectory+'read_js.php?id='+id );
+}
+
+function getFeedList()
+{
+  loadScript( g_homeDirectory+'list_js.php' );
+}
+</script>
+</head>
+<body>
+<div class="rssControl">
+<div class="rssControlTitle">
+<select id="elFeedList" 
+  onchange="loadFeed( this.options[this.selectedIndex].value )">
+</select>
+</div>
+<div id="elArticles">
+</div>
+</div>
+<script>
+getFeedList();
+</script>
+</body>
+</html>

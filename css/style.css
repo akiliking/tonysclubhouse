@@ -1,0 +1,115 @@
+		body {background:#000000; color:#C9CBB6}
+		p {font-family:Verdana,Arial,Helvetica;font-size:10px;color:#000000;}
+		p.list {font-family:Verdana,Arial,Helvetica;font-size:10px;font-weight:bold;color:#616161;}
+		p.list2 {font-family:Verdana,Arial,Helvetica;font-size:10px;color:#616161;}
+		.list3 {font-family:Verdana,Arial,Helvetica;font-size:10px;color:#616161;margin:0px;font-weight:normal;}
+		p.sub {font-family:Verdana,Arial,Helvetica;font-size:15px;color:#004D80;font-weight:bold;margin-top:10px;}
+		p.portdesc {font-family:Verdana,Arial,Helvetica;font-size:11px;color:#636565; margin:10px;}
+		p.sub2 {font-family:Verdana,Arial,Helvetica;font-size:13px;color:#E88800;font-weight:bold;margin:0px;}
+		p.port {font-family:Verdana,Arial,Helvetica;font-size:13px;color:#7575AE;font-weight:bold;margin:0px;}
+		p.sub3 {font-family:Verdana,Arial,Helvetica;font-size:13px;color:#7575AD;font-weight:bold;margin:0px;}
+		p.sub4 {font-family:Verdana,Arial,Helvetica;font-size:11px;color:#9A9A9A;font-weight:bold;margin:0px;}
+		.bl {color:#3D65B4;font-weight:bold;}
+		.in {margin-left:10px;}
+		a {color:#2E4BB6; text-decoration:underline; font-weight:bold;}
+		a.sub {color:#004D80;text-decoration:none;}
+		a.sub:hover {color:#004D80; text-decoration:underline;}
+		a.port {color:#203CC7;text-decoration:none;font-weight:normal;}
+		a.port:hover {color:#203CC7; text-decoration:underline;}
+		.cf {background:#FFFFFF;border:solid 1 #F6D889;width:100%; font-family:Arial; font-size:11px;}
+		.cf2 {background:#FFFFFF;border:solid 1 #F6D889; font-family:Arial; font-size:11px;}
+		.sel {width:150px;}
+		.sm1 {font-family:Verdana,Arial,Helvetica;font-size:11px;color:#373737;font-weight:bold;}
+		.sm2 {font-family:Verdana,Arial,Helvetica;font-size:11px;color:#384DAA;}
+		a.sm1 {color:#373737;text-decoration:none;}
+		a.sm1:hover {color:#384DAA;}
+		a.sm2 {color:#384DAA;text-decoration:none;font-weight:normal;}
+		a.sm2:hover {color:#081446;}
+		.nav {font-family:Verdana,Arial,Helvetica;font-size:10px;color:#AAAAAA;}
+		.curnav {font-family:Verdana,Arial,Helvetica;font-size:10px;color:#FFFFFF;font-weight:bold;}
+		a.nav {color:#AAAAAA;text-decoration:none;}
+		a.nav:hover {color:#000000;}
+		p.com {font-family:Verdana,Arial,Helvetica;font-size:10px;color:#616161;margin-left:20px;margin-right:20px;}
+		p.edate {color:#3D65B4;margin:10px;}
+		p.eupdate {margin:10px;}
+		.eh {color:#E2A93C;font-weight:bold;}
+
+#navcontainer		{ margin: 0; padding: 0;}
+#navcontainer ul	{ margin: 0; padding: 0; list-style: none; list-style-type: none;}
+#navcontainer li 	{ margin: 0px 0px 0px 0px; padding: 0; list-style: none; list-style-type: none; }
+#navcontainer img 	{ margin: 0; padding: 0;}
+#navcontainer a		{ display:block; background-image: url(images/li.gif); background-repeat: no-repeat;background-position: 5px 50%; background-color: #4C4C80; font-size: 10px; font-weight: bold; font-family: Verdana,Arial,Helvetica; color: white; width: 173px; text-decoration: none; padding: 3px 0 3px 28px; }
+#navcontainer a:hover	{ display:block; background-image: url(images/li2.gif); background-repeat: no-repeat;background-position: 5px 50%; background-color: #9393B2; font-size: 10px; font-weight: bold; font-family: Verdana,Arial,Helvetica; color: white; }
+
+a.bottom:link		{ color: #F7941D; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif; font-weight: bold; text-decoration: none; }
+a.bottom:active		{ color: #F7941D; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif; font-weight: bold; text-decoration: none; }
+a.bottom:visited	{ color: #F7941D; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif; font-weight: bold; text-decoration: none; }
+a.bottom:hover		{ color: #F7941D; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif; font-weight: bold; text-decoration: overline underline; }
+
+.navFooter		{ width: 766px; background-image: url(images/botpx.jpg) ; background-position:top center; background-repeat:repeat-x; font-size: 9px; font-weight: normal; color: #999999; margin: 0pt; padding: 0pt; }
+
+
+TABLE.logintable 		{ text-align: left; vertical-align: top; font-family:Tahoma, Verdana, Helvetica, sans-serif; font-size:11px; color:#818181; }
+
+
+TABLE.maintable 		{ PADDING-RIGHT: 10px;  PADDING-LEFT: 5px; text-align: left; vertical-align: top; font-family:Verdana,Arial,Helvetica; font-size:11px; COLOR: #333333;}
+TABLE.maintable TD.title				{PADDING-RIGHT: 10px; PADDING-LEFT: 5px; text-align: left; vertical-align: top; font-family:Verdana,Arial,Helvetica; font-size:16px; color:#364317; font-weight:bolder; }
+TABLE.maintable TD.mainheader {PADDING-RIGHT: 10px; PADDING-LEFT: 5px; text-align: left; vertical-align: top; font-family:Verdana,Arial,Helvetica; font-size:14px; color:#5E5F1B; font-weight:bold; }
+TABLE.maintable TD {PADDING-RIGHT: 10px; PADDING-LEFT: 5px; text-align: left; vertical-align: top; font-family:Verdana,Arial,Helvetica; font-size:11px; color:white; }
+TABLE.maintable TD.content {PADDING-RIGHT: 10px; PADDING-LEFT: 5px; text-align: left; vertical-align: top; font-family:Verdana,Arial,Helvetica; font-size:11px; color:#333333; }
+TABLE.maintable TH				{PADDING-RIGHT: 10px; PADDING-LEFT: 5px; text-align: left; vertical-align: top; font-family:Verdana,Arial,Helvetica; font-size:16px; color:#364317; font-weight:bolder; }
+
+TABLE.statstable 		{ text-align: left; vertical-align: top; font-family:Tahoma, Verdana, Helvetica, sans-serif; font-size:11px; color:#B0B652; }
+TABLE.statstable TH {
+	BORDER-RIGHT: #807971 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ebe2c7 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: middle; BORDER-LEFT: #ebe2c7 1px solid; COLOR: white; PADDING-TOP: 3px; BORDER-BOTTOM: #807971 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #4C4C80
+}
+TABLE.statstable TD.level2 {
+	BORDER-RIGHT: #bfb5aa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: white; PADDING-TOP: 3px; BORDER-BOTTOM: #bfb5aa 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #9393B2
+}
+TABLE.statstable TD {
+	BORDER-RIGHT: #bfb5aa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: black; PADDING-TOP: 3px; BORDER-BOTTOM: #bfb5aa 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #DBE1E8
+}
+TABLE.formstable 		{ text-align: left; vertical-align: top; font-family:Tahoma, Verdana, Helvetica, sans-serif; font-size:11px; color:#818181; }
+
+TABLE.playertatstable 		{ text-align: left; vertical-align: top; font-family:Tahoma, Verdana, Helvetica, sans-serif; font-size:11px; color:#B0B652; }
+TABLE.playertatstable TH {
+	BORDER-RIGHT: #807971 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ebe2c7 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: middle; BORDER-LEFT: #ebe2c7 1px solid; COLOR: white; PADDING-TOP: 3px; BORDER-BOTTOM: #807971 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #4C4C80
+}
+TABLE.playertatstable TD.level2 {
+	BORDER-RIGHT: #bfb5aa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: white; PADDING-TOP: 3px; BORDER-BOTTOM: #bfb5aa 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #9393B2
+}
+TABLE.playertatstable TD {
+	BORDER-RIGHT: #bfb5aa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: black; PADDING-TOP: 3px; BORDER-BOTTOM: #bfb5aa 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #DBE1E8
+}
+
+
+TABLE.newstable {
+	text-align: left; vertical-align: top; font-family:Tahoma, Verdana, Helvetica, sans-serif; font-size:11px; color:#818181; }
+TABLE.newstable TH {
+	BORDER-RIGHT: #807971 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ebe2c7 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: middle; BORDER-LEFT: #ebe2c7 1px solid; COLOR: #333333; PADDING-TOP: 3px; BORDER-BOTTOM: #807971 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #4C4C80
+}
+TABLE.newstable TD.headline {
+	BORDER-RIGHT: #807971 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ebe2c7 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ebe2c7 1px solid; COLOR: white; PADDING-TOP: 3px; BORDER-BOTTOM: #807971 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #9393B2
+}
+TABLE.newstable TD {
+	BORDER-RIGHT: #bfb5aa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: top; BORDER-LEFT: #ffffff 1px solid; COLOR: #333333; PADDING-TOP: 3px; BORDER-BOTTOM: #bfb5aa 1px solid; FONT-FAMILY: Tahoma, Verdana,Helvetica, sans-serif;  BACKGROUND-COLOR: #DBE1E8
+}
+TABLE.newstable A {
+	COLOR: #0066cc; TEXT-DECORATION: underline
+}
+TABLE.newstable A:visited {
+	COLOR: #666666
+}
+TABLE.newstable A:hover {
+	COLOR: #003366
+}
+
+.button 
+	{  
+		background-color: #9393B2; 
+		border: solid 1 black;
+		font-family: Arial, Helvetica, sans-serif; 
+		font-size: 8pt; 
+		font-weight: bold; 
+		color: white
+		}

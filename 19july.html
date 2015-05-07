@@ -1,0 +1,1542 @@
+ 
+ 
+<html><head> 
+ 
+  <title>19JULY | GENERAL AUNG SAN</title>
+        <link rel="stylesheet" type="text/css" href="http://www.myanmarinvestments.com/ckfinder/userfiles/images/css/style.css" />
+        <script src="http://www.myanmarinvestments.com/ckfinder/userfiles/images/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+        <script src="http://www.myanmarinvestments.com/ckfinder/userfiles/images/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function(){
+    
+                $('#midground').css({backgroundPosition: '0px 0px'});
+                $('#foreground').css({backgroundPosition: '0px 0px'});
+                $('#background').css({backgroundPosition: '0px 0px'});
+    
+                $('#midground').animate({
+                    backgroundPosition:"(-10000px -2000px)"
+                }, 240000, 'linear');
+      
+                $('#foreground').animate({
+                    backgroundPosition:"(-10000px -2000px)"
+                }, 150000, 'linear');
+      
+                $('#background').animate({
+                    backgroundPosition:"(-10000px -2000px)"
+                }, 380000, 'linear');
+      
+            });
+        </script>
+        <!-- -----------------snow------------------------ -->
+        <script type="text/javascript">
+
+
+
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+
+var snowmax=40
+
+
+
+// Set the colors for the snow. Add as many colors as you like
+
+var snowcolor=new Array("white","white","white","white","white")
+
+
+
+// Set the fonts, that create the snowflakes. Add as many fonts as you like
+
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+
+
+
+// Set the letter that creates your snowflake (recommended: * )
+
+var snowletter="."
+
+
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+
+var sinkspeed=0.6
+
+
+
+// Set the maximum-size of your snowflakes
+
+var snowmaxsize=30
+
+
+
+// Set the minimal-size of your snowflakes
+
+var snowminsize=8
+
+
+
+// Set the snowing-zone
+
+// Set 1 for all-over-snowing, set 2 for left-side-snowing
+
+// Set 3 for center-snowing, set 4 for right-side-snowing
+
+var snowingzone=1
+
+
+
+/*
+
+// * NO CONFIGURATION BELOW HERE *
+
+*/
+
+
+
+// Do not edit below this line
+
+var snow=new Array()
+
+var marginbottom
+
+var marginright
+
+var timer
+
+var i_snow=0
+
+var x_mv=new Array();
+
+var crds=new Array();
+
+var lftrght=new Array();
+
+var browserinfos=navigator.userAgent
+
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+
+var ns6=document.getElementById&&!document.all
+
+var opera=browserinfos.match(/Opera/)
+
+var browserok=ie5||ns6||opera
+
+
+
+function randommaker(range) {
+
+rand=Math.floor(range*Math.random())
+
+return rand
+
+}
+
+
+
+function initsnow() {
+
+if (ie5 || opera) {
+
+marginbottom = document.body.clientHeight
+
+marginright = document.body.clientWidth
+
+}
+
+else if (ns6) {
+
+marginbottom = window.innerHeight
+
+marginright = window.innerWidth
+
+}
+
+var snowsizerange=snowmaxsize-snowminsize
+
+for (i=0;i<=snowmax;i++) {
+
+crds[i] = 0;
+
+lftrght[i] = Math.random()*25;
+
+x_mv[i] = 0.03 + Math.random()/10;
+
+snow[i]=document.getElementById("s"+i)
+
+snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+
+snow[i].size=randommaker(snowsizerange)+snowminsize
+
+snow[i].style.fontSize=snow[i].size
+
+snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+
+snow[i].sink=sinkspeed*snow[i].size/9
+
+if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+
+if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+
+if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+
+if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+
+snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+
+snow[i].style.left=snow[i].posx
+
+snow[i].style.top=snow[i].posy
+
+}
+
+movesnow()
+
+}
+
+
+
+function movesnow() {
+
+for (i=0;i<=snowmax;i++) {
+
+crds[i] += x_mv[i];
+
+snow[i].posy+=snow[i].sink
+
+snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+
+snow[i].style.top=snow[i].posy
+
+
+
+if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+
+if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+
+if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+
+if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+
+if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+
+snow[i].posy=0
+
+}
+
+}
+
+var timer=setTimeout("movesnow()",50)
+
+}
+
+
+
+for (i=0;i<=snowmax;i++) {
+
+document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+
+}
+
+if (browserok) {
+
+window.onload=initsnow
+
+}
+
+
+
+</SCRIPT>
+
+        <!-- ------------------end snow---------------------- -->
+<style type="text/css"> 
+ 
+<!--
+ 
+.ahgcrewstyle {
+ 
+	color: #F00;
+ 
+}
+ 
+.ahg {
+ 
+	color: #0F0;
+ 
+}
+ 
+-->
+ 
+</style> 
+<p></p><center> 
+<center></center> 
+<script type="text/javascript"> 
+ 
+ 
+ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+ 
+ 
+ 
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == 
+"undefined")) {
+ 
+ 
+ 
+    this.running = true;
+ 
+ 
+ 
+    return;
+ 
+ 
+ 
+  }
+ 
+ 
+ 
+  this.element = element;
+ 
+ 
+ 
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+ 
+ 
+ 
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+ 
+ 
+ 
+  this.origText = this.element.innerHTML;
+ 
+ 
+ 
+  this.unparsedOrigText = this.origText;
+ 
+ 
+ 
+  this.cursor = (cursor ? cursor : "");
+ 
+ 
+ 
+  this.currentText = "";
+ 
+ 
+ 
+  this.currentChar = 0;
+ 
+ 
+ 
+  this.element.typingText = this;
+ 
+ 
+ 
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+ 
+ 
+ 
+  TypingText.all.push(this);
+ 
+ 
+ 
+  this.running = false;
+ 
+ 
+ 
+  this.inTag = false;
+ 
+ 
+ 
+  this.tagBuffer = "";
+ 
+ 
+ 
+  this.inHTMLEntity = false;
+ 
+ 
+ 
+  this.HTMLEntityBuffer = "";
+ 
+ 
+ 
+}
+ 
+ 
+ 
+TypingText.all = new Array();
+ 
+ 
+ 
+TypingText.currentIndex = 0;
+ 
+ 
+ 
+TypingText.runAll = function() {
+ 
+ 
+ 
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+ 
+ 
+ 
+}
+ 
+ 
+ 
+TypingText.prototype.run = function() {
+ 
+ 
+ 
+  if(this.running) return;
+ 
+ 
+ 
+  if(typeof this.origText == "undefined") {
+ 
+ 
+ 
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+this.interval);
+ 
+ 
+ 
+    return;
+ 
+ 
+ 
+  }
+ 
+ 
+ 
+  if(this.currentText == "") this.element.innerHTML = "";
+ 
+ 
+ 
+  if(this.currentChar < this.origText.length) {
+ 
+ 
+ 
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+ 
+ 
+ 
+      this.tagBuffer = "<";
+ 
+ 
+ 
+      this.inTag = true;
+ 
+ 
+ 
+      this.currentChar++;
+ 
+ 
+ 
+      this.run();
+ 
+ 
+ 
+      return;
+ 
+ 
+ 
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+ 
+ 
+ 
+      this.tagBuffer += ">";
+ 
+ 
+ 
+      this.inTag = false;
+ 
+ 
+ 
+      this.currentText += this.tagBuffer;
+ 
+ 
+ 
+      this.currentChar++;
+ 
+ 
+ 
+      this.run();
+ 
+ 
+ 
+      return;
+ 
+ 
+ 
+    } else if(this.inTag) {
+ 
+ 
+ 
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+ 
+ 
+ 
+      this.currentChar++;
+ 
+ 
+ 
+      this.run();
+ 
+ 
+ 
+      return;
+ 
+ 
+ 
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+ 
+ 
+ 
+      this.HTMLEntityBuffer = "&";
+ 
+ 
+ 
+      this.inHTMLEntity = true;
+ 
+ 
+ 
+      this.currentChar++;
+ 
+ 
+ 
+      this.run();
+ 
+ 
+ 
+      return;
+ 
+ 
+ 
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+ 
+ 
+ 
+      this.HTMLEntityBuffer += ";";
+ 
+ 
+ 
+      this.inHTMLEntity = false;
+ 
+ 
+ 
+      this.currentText += this.HTMLEntityBuffer;
+ 
+ 
+ 
+      this.currentChar++;
+ 
+ 
+ 
+      this.run();
+ 
+ 
+ 
+      return;
+ 
+ 
+ 
+    } else if(this.inHTMLEntity) {
+ 
+ 
+ 
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+ 
+ 
+ 
+      this.currentChar++;
+ 
+ 
+ 
+      this.run();
+ 
+ 
+ 
+      return;
+ 
+ 
+ 
+    } else {
+ 
+ 
+ 
+      this.currentText += this.origText.charAt(this.currentChar);
+ 
+ 
+ 
+    }
+ 
+ 
+ 
+    this.element.innerHTML = this.currentText;
+ 
+ 
+ 
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+ 
+ 
+ 
+    this.currentChar++;
+ 
+ 
+ 
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+this.interval);
+ 
+ 
+ 
+  } else {
+ 
+ 
+ 
+	this.currentText = "";
+ 
+ 
+ 
+	this.currentChar = 0;
+ 
+ 
+ 
+        this.running = false;
+ 
+ 
+ 
+        this.finishedCallback();
+ 
+ 
+ 
+  }
+ 
+ 
+ 
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</script>  
+ 
+ 
+ 
+<script> 
+ 
+ 
+ 
+var width=document.body.clientWidth;
+ 
+ 
+ 
+var height=document.body.clientHeight;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+function doClickText(who,type,step,timeOut) {
+ 
+ 
+ 
+document.getElementById(who).style.display="none";
+ 
+ 
+ 
+if(type==0) {
+ 
+ 
+ 
+reveal('revealDiv1',step,timeOut,0);
+ 
+ 
+ 
+reveal('revealDiv2',step,timeOut,1);}
+ 
+ 
+ 
+if(type==1) {
+ 
+ 
+ 
+reveal('revealDiv1',step,timeOut,2);
+ 
+ 
+ 
+reveal('revealDiv2',step,timeOut,3);}}
+ 
+ 
+ 
+function reveal(who,step,timeOut,type) {
+ 
+ 
+ 
+if(type==0)
+ 
+ 
+ 
+var where="top";
+ 
+ 
+ 
+if(type==1)
+ 
+ 
+ 
+var where="bottom";
+ 
+ 
+ 
+if(type==2)
+ 
+ 
+ 
+var where="left";
+ 
+ 
+ 
+if(type==3)
+ 
+ 
+ 
+var where="right";
+ 
+ 
+ 
+eval('var temp=document.getElementById(who).style.'+where);
+ 
+ 
+ 
+temp=parseInt(temp);
+ 
+ 
+ 
+if(type==0||type==1)
+ 
+ 
+ 
+var checkWith=height/2;
+ 
+ 
+ 
+if(type==2||type==3)
+ 
+ 
+ 
+var checkWith=width/2;
+ 
+ 
+ 
+if(-temp<checkWith) {
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+temp-=step;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+eval('document.getElementById(who).style.'+where+'=temp;');
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+setTimeout("reveal('"+who+"',"+step+",'"+timeOut+"',"+type+")", timeOut);}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+else {
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+document.getElementById(who).style.display="none";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+document.body.scroll="yes";}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+function initReveal(type,div1bg,div2bg,div1bw,div2bw,div1bc,div2bc,step,timeOut,click) {
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+if(type==0) {
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+var bWhere1="border-bottom";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+var bWhere2="border-top";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+var putZero1="top:0px; left:0px";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+var putZero2="bottom:0px; left:0px";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+document.write('<div id="revealDiv1" style="z-index:100; display:block; position:absolute; '+putZero1+'; background:'+div1bg+' ; width:'+(width)+'; height:'+(height/2)+'; '+bWhere1+':'+div1bc+' solid '+div1bw+'px"></div>');
+ 
+ 
+ 
+document.write('<div id="revealDiv2" style="z-index:100; display:block; position:absolute; '+putZero2+'; background:'+div2bg+' ; width:'+(width)+'; height:'+(height/2)+'; '+bWhere2+':'+div2bc+' solid '+div2bw+'px"></div>');
+ 
+ 
+ 
+if(!click) {
+ 
+ 
+ 
+reveal('revealDiv1',step,timeOut,0);
+ 
+ 
+ 
+reveal('revealDiv2',step,timeOut,1);}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+else {
+ 
+ 
+ 
+clickText(type,step,timeOut);}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+if(type==1) {
+ 
+ 
+ 
+var bWhere1="border-right";
+ 
+ 
+ 
+var bWhere2="border-left";
+ 
+ 
+ 
+var putZero1="top:0px; left:0px";
+ 
+ 
+ 
+var putZero2="top:0px; right:0px";
+ 
+ 
+ 
+document.write('<div id="revealDiv1" style="z-index:100; display:block; position:absolute; '+putZero1+'; background:'+div1bg+' ; width:'+(width/2)+'; height:'+(height)+'; '+bWhere1+':'+div1bc+' solid '+div1bw+'px"></div>');
+ 
+ 
+ 
+document.write('<div id="revealDiv2" style="z-index:100; display:block; position:absolute; '+putZero2+'; background:'+div2bg+' ; width:'+(width/2)+'; height:'+(height)+'; '+bWhere2+':'+div2bc+' solid '+div2bw+'px"></div>');
+ 
+ 
+ 
+if(!click) {
+ 
+ 
+ 
+reveal('revealDiv1',step,timeOut,2);
+ 
+ 
+ 
+reveal('revealDiv2',step,timeOut,3);}
+ 
+ 
+ 
+else {
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+//
+ 
+ 
+ 
+function clickIE4(){
+ 
+ 
+ 
+if (event.button==2){
+ 
+ 
+ 
+alert(message);
+ 
+ 
+ 
+return false;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+}
+ 
+ 
+ 
+function rtclickcheck(keyp){
+ 
+  if (navigator.appName == "Netscape" && keyp.which == 3) {
+ 
+    alert(mymessage);
+ 
+    return false;
+ 
+  }
+ 
+ 
+ 
+  if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+ 
+    alert(mymessage);
+ 
+    return false;
+ 
+  }
+ 
+}
+ 
+ 
+ 
+document.onmousedown = rtclickcheck
+ 
+//-->
+ 
+</script> 
+ 
+ 
+ 
+<!--
+ 
+body {
+ 
+	background-color: #ffffff;
+ 
+}
+ 
+--> 
+ 
+<style type="text/css"> 
+ 
+<!--
+ 
+<title>HACKED BY Maher Bro ~#</title>
+ 
+ 
+ 
+<!--
+ 
+body {
+ 
+	background-color: #ffffff;
+ 
+}
+ 
+-->
+ 
+</style><style type="text/css"> 
+ 
+<!--
+ 
+body {
+ 
+	background-color: #000000;
+ 
+	
+ 
+}
+ 
+.style3 {
+ 
+	color: #FF0000;
+ 
+	font-size: 22;
+ 
+	font-family: Georgia, "Times New Roman", Times, serif;
+ 
+}
+ .style134 {
+ 
+  color: green;
+  font-size: 22;
+ 
+  font-family: Georgia, "Times New Roman", Times, serif;
+ 
+}
+.style10 {
+ 
+	color: #999999;
+ 
+	font-size: 20px;
+ 
+}
+ 
+.style13 {color: #FFFFFF; font-size: 20px; }
+ 
+.style14 {color: #999999}
+ 
+.style16 {font-size: 18px}
+ 
+.style17 {color: #FFFFFF}
+
+#as{
+  color: yellow;
+}
+ 
+-->
+ 
+ 
+ 
+</style></head><body> 
+
+ 
+<p style="text-align: center;" align="center"> 
+ 
+ 
+ 
+ 
+ 
+</p>
+<p style="text-align: center;" align="center"> 
+  
+  
+  
+</p><form name="form1" style="text-align: center;"> 
+ 
+  <div align="center"> 
+
+  </div> 
+</form> 
+ 
+<div align="center"> 
+</br></br></br></br>
+  <h1><font color="white"> 67<sup>th</sup> Anniversary </font></h1>
+</br> 
+  <h1> 
+    <script> 
+ 
+farbbibliothek = new Array(); 
+ 
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+ 
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"); 
+ 
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+ 
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+ 
+ 
+farben = farbbibliothek[4];
+ 
+function farbschrift() 
+ 
+{ 
+ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+ 
+{ 
+ 
+document.all["a"+i].style.color=farben[i]; 
+ 
+} 
+ 
+farbverlauf(); 
+ 
+} 
+ 
+function string2array(text) 
+ 
+{ 
+ 
+Buchstabe = new Array(); 
+ 
+while(farben.length<text.length) 
+ 
+{ 
+ 
+farben = farben.concat(farben); 
+ 
+} 
+ 
+k=0; 
+ 
+while(k<=text.length) 
+ 
+{ 
+ 
+Buchstabe[k] = text.charAt(k); 
+ 
+k++; 
+ 
+} 
+ 
+} 
+ 
+function divserzeugen() 
+ 
+{ 
+ 
+for(var i=0 ; i<Buchstabe.length; i++) 
+ 
+{ 
+ 
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+ 
+} 
+ 
+farbschrift(); 
+ 
+} 
+ 
+var a=1; 
+ 
+function farbverlauf() 
+ 
+{ 
+ 
+for(var i=0 ; i<farben.length; i++) 
+ 
+{ 
+ 
+farben[i-1]=farben[i]; 
+ 
+} 
+ 
+farben[farben.length-1]=farben[-1]; 
+ 
+ 
+ 
+setTimeout("farbschrift()",30); 
+ 
+} 
+ 
+// Zu Demonstrationszwecken***************** 
+ 
+var farbsatz=1; 
+ 
+function farbtauscher() 
+ 
+{ 
+ 
+farben = farbbibliothek[farbsatz]; 
+ 
+while(farben.length<text.length) 
+ 
+{ 
+ 
+farben = farben.concat(farben); 
+ 
+} 
+ 
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+ 
+} 
+ 
+setInterval("farbtauscher()",500000000); 
+
+text= "19 JULY | MYANMAR MARTYR'S DAY"; //h 
+ 
+string2array(text); 
+ 
+divserzeugen(); 
+ 
+//document.write(text);</script> 
+ 
+  </h1> 
+ 
+  <font style="font-size: 4pt;" face="Times New Roman">
+<TBODY> 
+ 
+  <TR> 
+ 
+    <TD><P>    
+      <TABLE cellPadding=10 align=center> 
+ 
+        <TBODY> 
+ 
+      <TD> 
+ 
+ 
+ 
+            <CENTER> 
+ 
+            </CENTER> 
+
+  <p> 
+
+	  <script type="text/javascript"> 
+ 
+TypingText = function(element, interval, cursor, finishedCallback) {
+ 
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+ 
+    this.running = true;
+ 
+    return;
+ 
+  }
+ 
+  this.element = element;
+ 
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+ 
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+ 
+  this.origText = this.element.innerHTML;
+ 
+  this.unparsedOrigText = this.origText;
+ 
+  this.cursor = (cursor ? cursor : "");
+ 
+  this.currentText = "";
+ 
+  this.currentChar = 0;
+ 
+  this.element.typingText = this;
+ 
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+ 
+  TypingText.all.push(this);
+ 
+  this.running = false;
+ 
+  this.inTag = false;
+ 
+  this.tagBuffer = "";
+ 
+  this.inHTMLEntity = false;
+ 
+  this.HTMLEntityBuffer = "";
+ 
+}
+ 
+TypingText.all = new Array();
+ 
+TypingText.currentIndex = 0;
+ 
+TypingText.runAll = function() {
+ 
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+ 
+}
+ 
+TypingText.prototype.run = function() {
+ 
+  if(this.running) return;
+ 
+  if(typeof this.origText == "undefined") {
+ 
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+ 
+    return;
+ 
+  }
+ 
+  if(this.currentText == "") this.element.innerHTML = "";
+ 
+  if(this.currentChar < this.origText.length) {
+ 
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+ 
+      this.tagBuffer = "<";
+ 
+      this.inTag = true;
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+ 
+      this.tagBuffer += ">";
+ 
+      this.inTag = false;
+ 
+      this.currentText += this.tagBuffer;
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.inTag) {
+ 
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+ 
+      this.HTMLEntityBuffer = "&";
+ 
+      this.inHTMLEntity = true;
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+ 
+      this.HTMLEntityBuffer += ";";
+ 
+      this.inHTMLEntity = false;
+ 
+      this.currentText += this.HTMLEntityBuffer;
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else if(this.inHTMLEntity) {
+ 
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+ 
+      this.currentChar++;
+ 
+      this.run();
+ 
+      return;
+ 
+    } else {
+ 
+      this.currentText += this.origText.charAt(this.currentChar);
+ 
+    }
+ 
+    this.element.innerHTML = this.currentText;
+ 
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+ 
+    this.currentChar++;
+ 
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+ 
+  } else {
+ 
+	this.currentText = "";
+ 
+	this.currentChar = 0;
+ 
+        this.running = false;
+ 
+        this.finishedCallback();
+ 
+  }
+ 
+}
+ 
+ 
+ 
+</script>  
+ 
+ 
+<style type="text/css"> 
+ 
+/* Circle Text Styles */
+ 
+#outerCircleText {
+ 
+/* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+ 
+font-style: italic;
+ 
+font-weight: bold;
+ 
+font-family: 'comic sans ms', verdana, arial;
+ 
+color: #FFF;
+ 
+/* End Optional */
+ 
+ 
+ 
+/* Start Required - Do Not Edit */
+ 
+position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+ 
+#outerCircleText div {position: relative;}
+ 
+#outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+ 
+/* End Required */
+ 
+/* End Circle Text Styles */
+ 
+</style>   
+ 
+</div> 
+ 
+ 
+ 
+<center> 
+
+ 
+ 
+ <p align="center" class="style3" id="message"><span class="style10"> Entire national people recognize the people who were murdered in 19 July, 1947.&nbsp&nbspThey were</span></br> 
+ 
+ 
+      <span class="style13" id="as">General Aung San</span></span></br> 
+      <span class="style13">Thakin Mya</span></span></br> 
+      <span class="style13">U Ba Cho</span></span></br> 
+      <span class="style13">U Ba Win</span></span></br> 
+      <span class="style13">Mahn Ba Khaing</span></span></br> 
+      <span class="style13">Sao San Tun</span></span></br> 
+      <span class="style13">U Ohm Maung</span></span></br> 
+      <span class="style13">U Razak and...</span></span></br> 
+      <span class="style13">B.Guard Comrade Mg Htwe</span></span></br> 
+
+
+ 
+ </span><span class="style3"><br> 
+ 
+	  <span class="style3">They were proudly honoured by MYANMAR H4CK3R UNITE4M</span></span>
+  <span class="style8">
+  </br>
+   <span class="style134"> Greetz: BHG, BHA, MNH, MCA, BMH & All Myanmar Black Hat Hackers ... </span></span>
+ 
+      <script type="text/javascript">
+ 
+new TypingText(document.getElementById("message"), 50, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+ 
+ 
+ 
+//Type out examples:
+
+TypingText.runAll();
+ 
+ 
+ 
+    </script> 
+ 
+    </span><br>
+     <div id="background1"></div>
+        <div id="midground"></div>
+        <div id="foreground"></div>
+<!-- <br/></br></br><marquee > <font color="green"> Greetz: BHG, BHA, MNH, MCA, BMH & All Myanmar Black Hats ... </font> </marquee> -->
+  </body>
+
+
+</html>
+ 
+</Script>
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,81 @@
+		<script>
+		function GetMonthLength( i )
+			{
+			var oDate = new Date( );
+			var a = new Array( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 );
+			if ( oDate.getFullYear( ) % 4 == 0 )
+				{
+				a[ 1 ] = 29;
+				}
+			return a[ i ];
+			}
+		
+		function OnSelectMonth( sMonthField, sDayField, fFirst )
+			{
+			var oMonth = document.getElementById( sMonthField );
+			var oDay = document.getElementById( sDayField );
+			if ( oMonth != null && oDay != null )
+				{
+				oDay.value = fFirst ? 1 : GetMonthLength( oMonth.options( oMonth.selectedIndex ).value );
+				}
+			}
+		
+		// Determines how many days in month, and dynamicaly changes the days in the input field,
+		// when the drop down month menu is changed to a different month. Also finds leap years.
+		function populate(sMonthField, sDayField, sYearField) {
+			
+			var oMonth = document.getElementById( sMonthField );
+			var oDay = document.getElementById( sDayField );
+			var oYear = document.getElementById( sYearField );
+			 		
+			var oDate = new Date( );
+			var a = new Array( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 );
+				
+			if ( oYear.options[oYear.selectedIndex].text % 4 == 0 ) {
+				a[ 1 ] = 29;
+			}
+			b = oDay.selectedIndex;
+						
+			for (var i = 0; i < oDay.length; i++) {
+				oDay.options[i] = null;
+			}
+			for (var i = 0; i < a[oMonth.selectedIndex]; i++) {
+				oDay.options[i] = new Option(i+1);
+			}
+			
+			oDay.options[oDay.length-1].selected = true;
+			
+			/*
+			var oDate = new Date( );
+			var a = new Array( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 );
+				
+			if ( oForm.ToYear.options[oForm.ToYear.selectedIndex].text % 4 == 0 ) {
+				a[ 1 ] = 29;
+			}
+			b = oForm.ToDay.selectedIndex;
+						
+			for (var i = 0; i < oForm.ToDay.length; i++) {
+				oForm.ToDay.options[i] = null;
+			}
+			for (var i = 0; i < a[oForm.ToMonth.selectedIndex]; i++) {
+				oForm.ToDay.options[i] = new Option(i+1);
+			}
+			
+			oForm.ToDay.options[oForm.ToDay.length-1].selected = true;
+			
+			if ( oForm.gYear.options[oForm.FromYear.selectedIndex].text % 4 == 0 ) {
+				a[ 1 ] = 29;
+			}
+			b = oForm.FromDay.selectedIndex;
+						
+			for (var i = 0; i < oForm.FromDay.length; i++) {
+				oForm.FromDay.options[i] = null;
+			}
+			for (var i = 0; i < a[oForm.FromMonth.selectedIndex]; i++) {
+				oForm.FromDay.options[i] = new Option(i+1);
+			}
+			
+			oForm.FromDay.options[oForm.FromDay.length-1].selected = true;
+			*/
+		}
+		</script>

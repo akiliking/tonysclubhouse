@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>High Q</title>
+
+	<meta name="author" content="kingplus" />
+	<meta name="copyright" content="copyright 2009 kingplus.com" />
+	<meta name="description" content="WebOS High Q! Kingplus, Inc." />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<link rel="apple-touch-icon" href="images/logo.png"/>
+	<link rel="shortcut icon" href="images/logo.png" >
+
+	<style type="text/css">
+		@import url("HighQ.css");
+	</style>
+
+	<script type="text/javascript" src="orientation.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() { setTimeout(loaded, 100) }, false);
+	
+		function loaded() {
+			document.getElementById("page_wrapper").style.visibility = "visible";
+			window.scrollTo(0, 1); // pan to the bottom, hides the location bar
+		}
+
+
+	</script>
+
+</head>
+
+<body onorientationchange="updateOrientation();">
+
+	 <div id="page_wrapper">
+		<h1>High Q!</h1>
+
+
+	</div>		<div >
+			<p>This game is based on the research Dr. J. Ridley Stroop who discovered the strange phenomenon now known as the "Stroop Effect" in the 1930's.  In psychology, the Stroop effect is a demonstration of the reaction time of a task. When a word such as blue, green, red, etc. is printed in a color differing from the color expressed by the word's semantic value (e.g. the word "red" printed in blue ink), naming the color of the word takes longer and is more prone to errors than when the meaning of the word is congruent with its ink color. </p>
+		</div>		
+		<div >
+			 <p><ol><h3><p>How To Play:</p></h3> 
+				<ol>
+						<p>Choose the <font color="red"><b>color</b></font> displayed, not the word!  How many can you get in 30 seconds?
+						</p>
+<table>
+					<tr><td>
+						
+						<img src="images/smartypants_screeshot2.png" border=0/>
+					</td></tr>
+			</table></ol>
+</ol></p>
+		</div>
+
+
+		<div>
+			<p>Compete against others for a Spot on our <a href="scores.php"> Top 10 High Scores List</a></p>
+			<p>Can you make the list? <a href="http://developer.palm.com/appredirect/?packageid=com.kingplus.highq" border=0><span style='font-size:15px'>DownLoad Now!</span></a></p>
+			
+		</div>
+		<div >
+			
+			<p>Contact us <a href='mailto:highq@kingplus.com?subject=High Q Support and Feedback'><img border=0 src='images/envelope.png'/></a></p>
+			<p>Visit us on the <a href='http://www.kingplus.com/WebOS/HighQ/'>Web <img border=0 src='images/application-web.png'/></a></p>
+			<p style="font-size:12px">Developed by <a href='http://www.kingplus.com/'>Kingplus</a>.</p>
+		</div>
+</body>
+</html>

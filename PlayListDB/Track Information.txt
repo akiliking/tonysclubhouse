@@ -1,0 +1,436 @@
+
+Database tcatscom_playlists running on localhost
+Top of Form
+   
+
+ Table  
+Action
+Records
+Type
+Size
+ 
+ dj_info   
+Browse 
+Select 
+Insert 
+Properties 
+Drop 
+Empty 
+1 
+ MyISAM  
+   3.7 KB 
+ 
+ playlist   
+Browse 
+Select 
+Insert 
+Properties 
+Drop 
+Empty 
+2 
+ MyISAM  
+   2.0 KB 
+ 
+ show_dtl   
+Browse 
+Select 
+Insert 
+Properties 
+Drop 
+Empty 
+3 
+ MyISAM  
+   2.1 KB 
+ 
+ show_hdr   
+Browse 
+Select 
+Insert 
+Properties 
+Drop 
+Empty 
+1 
+ MyISAM  
+   2.3 KB 
+ 
+ track_info   
+Browse 
+Select 
+Insert 
+Properties 
+Drop 
+Empty 
+2 
+ MyISAM  
+   2.1 KB 
+
+ 5 table(s)  
+Sum 
+9 
+-- 
+  12.3 KB 
+
+
+
+Bottom of Form
+
+Track Information 
+Top of Form
+    
+
+ Field 
+Type
+Attributes
+Null
+Default
+Extra
+Action
+ 
+ id 
+int(11)
+ 
+No 
+ 
+auto_increment 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ artist 
+varchar(80)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ track_name 
+varchar(80)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ label 
+varchar(80)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ comments 
+varchar(255)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ Genre 
+varchar(80)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ Rating 
+int(11)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+Bottom of Form
+
+
+
+
+Show Header 
+Top of Form
+    
+
+ Field 
+Type
+Attributes
+Null
+Default
+Extra
+Action
+ 
+ id 
+int(11)
+ 
+No 
+ 
+auto_increment 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ title 
+varchar(50)
+ 
+No 
+ 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ comments 
+varchar(255)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ active 
+int(11)
+ 
+No 
+1 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ show_date 
+date
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+Bottom of Form
+
+
+
+Playlist Details 
+Top of Form
+    
+
+ Field 
+Type
+Attributes
+Null
+Default
+Extra
+Action
+ 
+ id 
+int(11)
+ 
+No 
+ 
+auto_increment 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ set_name 
+varchar(30)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ list2dj 
+int(11)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ list2show 
+int(11)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+Bottom of Form
+
+
+
+
+DJ Information 
+Top of Form
+    
+
+ Field 
+Type
+Attributes
+Null
+Default
+Extra
+Action
+ 
+ id 
+int(11)
+ 
+No 
+ 
+auto_increment 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ dj_name 
+varchar(50)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ first_name 
+varchar(25)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ last_name 
+varchar(25)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ info_link 
+varchar(80)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ comments 
+varchar(255)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext 
+ 
+ type 
+varchar(40)
+ 
+Yes 
+NULL 
+ 
+Change 
+Drop 
+Primary 
+Index 
+Unique 
+Fulltext
+Bottom of Form
+
+
